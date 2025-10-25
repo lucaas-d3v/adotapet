@@ -1,0 +1,11 @@
+.logo {
+    width: 20vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #a4a4a4;
+}
