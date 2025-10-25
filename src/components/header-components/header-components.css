@@ -1,11 +1,11 @@
 .logo {
-    width: 20vh;
+    width: 7rem;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 0.9rem;
     background-color: #a4a4a4;
 }
