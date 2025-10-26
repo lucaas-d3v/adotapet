@@ -5,7 +5,7 @@ import { ProfileHeaderComponents } from "./profile-header-components/profile-hea
 
 @Component({
   selector: 'app-profile-components',
-  imports: [RouterOutlet, RouterLinkWithHref, NavBarFeed, ProfileHeaderComponents],
+  imports: [RouterOutlet, NavBarFeed, ProfileHeaderComponents],
   templateUrl: './profile-components.html',
   styleUrl: './profile-components.css',
 })
