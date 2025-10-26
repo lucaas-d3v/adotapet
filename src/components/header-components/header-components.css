@@ -9,3 +9,24 @@ header {
     padding: 0.9rem;
     background-color: #a4a4a4;
 }
+
+a {
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    /* tirar a area azul quando clica */
+}
+
+a:focus {
+    outline: none;
+}
+
+a:active {
+    outline: none;
+}
+
+a img {
+    outline: none;
+    border: none;
+    display: block;
+}

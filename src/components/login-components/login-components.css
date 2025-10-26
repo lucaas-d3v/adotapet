@@ -1,15 +1,15 @@
 :host {
-    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .container {
-    flex: 1;
     width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 h2 {
@@ -68,8 +68,4 @@ input {
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-}
-
-.destaque:hover {
-    background-color: #333;
 }
