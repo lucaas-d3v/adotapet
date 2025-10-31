@@ -1,0 +1,36 @@
+<div class="container">
+    <section>
+        <form [formGroup]="cadastro">
+            <h2>Cadastro</h2>
+
+            <div class="campo">
+                <p class="text">Nome</p>
+                <input id="email" formGroupName="nome" type="text" placeholder="Digite seu nome de usuário aqui...">
+            </div>
+
+            <div class="campo">
+
+                <p class="text">Telefone</p>
+                <input id="email" formGroupName="telefone" type="tel" placeholder="(xx) 9xxxx-xxxx">
+                <p class="whats">O telefone informado é seu whatsapp?</p>
+
+                <div class="check">
+
+                    <input class="whatsapp" id="sim" formGroupName="whatsappCheck" type="checkbox">
+                    <label for="sim">Sim</label>
+                </div>
+
+            </div>
+
+            <div class="campo">
+                <p class="text">Email</p>
+                <input id="email" formGroupName="email" type="email" placeholder="teste@gmail.com">
+            </div>
+            <div class="campo">
+                <p class="text">Senha</p>
+                <input id="senha" formGroupName="senha" type="password" placeholder="Digite sua senha aqui...">
+            </div>
+            <button class="destaque" onclick="alert('Logado com sucesso')">Entrar</button>
+        </form>
+    </section>
+</div>
