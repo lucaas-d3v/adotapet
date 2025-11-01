@@ -27,14 +27,27 @@ section {
     align-items: flex-end;
 
     background-color: #a4a4a4;
-    height: 40rem;
-    width: 40rem;
+    height: 40vw;
+    width: 90vw;
 
 
     border-radius: 3rem;
 }
 
+@media (min-widht: 768px){
+    .representacao_img {
+        height: 40rem;
+        width: 40rem
+    }
+}
+
 .titulo_post {
     font-size: 2.5rem;
     padding: 2rem;
+}
+
+.representacao_img, .titulo_post , .area_post  {
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
 }

@@ -21,3 +21,8 @@ app-root {
     flex-direction: column;
     min-height: 100vh;
 }
+body, app-root {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}

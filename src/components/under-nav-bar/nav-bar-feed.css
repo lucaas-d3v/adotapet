@@ -38,10 +38,16 @@ nav {
 ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
 
     gap: 9rem;
+}
+
+@media (min-width: 1024px){
+    ul {
+        gap: 9rem;
+    }
 }
 
 .linha {

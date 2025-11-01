@@ -68,4 +68,25 @@ input {
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.destaque:hover {
+    background-color: darken(black, 10%);
+}
+
+@media (min-width: 768px) {
+    section {
+        width: 40rem;
+        height: 60rem;
+    } 
+
+                .container {
+                    width: 100%;
+                    flex-direction: column;
+                    padding: 1rem;
+                }
+
+
 }
