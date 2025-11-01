@@ -1,23 +1,30 @@
 <main>
+  <section>
+    <img src="assets/perfil.png" alt="icone de perfil" />
 
-    <section>
+    <p class="nome">{{ nome }}</p>
 
-        <img src="assets/perfil.png" alt="icone de perfil">
+    <p class="pet_cadastrados">Total de pets cadastrados: {{ petsCadastrados }}</p>
 
-        <p class="nome">Nome Aqui</p>
+    <p class="bio">{{ bio }}</p>
+  </section>
 
-        <p class="pet_cadastrados">Total de pets caadastrados: x</p>
+  <h4>Posts de {{ nome }}</h4>
+  <!-- futuramente o dado deve vir do usuario direto do banco -->
 
-        <p class="bio"> bio aqui</p>
-    </section>
+  <article class="posts">
+    <app-post-components
+      *ngFor="let pet of listaPets; let i = index"
+      [nomePet]="pet.nome"
+      [idadePet]="pet.idade"
+      [attr.data-index]="i"
+    >
+    </app-post-components>
 
-    <h4>Posts de `nome`</h4>
-
-    <article class="posts">
+    <app-post-components></app-post-components>
 
 
-        <app-post-components></app-post-components>
 
-
-    </article>
+    <app-post-components [nomePet]="listaPets[0].nome" [idadePet]="listaPets[0].idade"></app-post-components>
+  </article>
 </main>
