@@ -1,59 +1,96 @@
-# AdotaPet
+# 🐾 AdotaPet - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+![AdotaPet Logo](src/assets/logo.png)
 
-## Development server
+> Conectando corações e patas! Uma plataforma web para facilitar a adoção de animais, permitindo que usuários cadastrem pets e encontrem novos amigos.
 
-To start a local development server, run:
+## 📱 Sobre o Projeto
 
-```bash
-ng serve
-```
+O **AdotaPet** é uma aplicação Single Page Application (SPA) desenvolvida em **Angular** que serve como interface para um sistema de adoção. O projeto foca em uma experiência de usuário fluida, com cadastro de usuários, feed de adoção interativo e gerenciamento de perfil.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Este projeto foi desenvolvido como trabalho final da disciplina de **Front End Frameworks**.
 
-## Code scaffolding
+### ✨ Funcionalidades Principais
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* **Autenticação:** Login e Cadastro de usuários com validação de formulários e integração JWT.
+* **Feed de Adoção:** Visualização de pets disponíveis em um layout de cards interativo.
+* **Contato Direto:** Botão de WhatsApp integrado nos cards para contato imediato com o doador.
+* **Perfil do Usuário:** Gerenciamento de dados do usuário e visualização dos pets cadastrados por ele.
+* **Cadastro de Pets:** Formulário para adicionar novos animais para adoção.
+* **Design Responsivo:** Interface adaptada para dispositivos móveis e desktop.
 
-```bash
-ng generate component component-name
-```
+## 🛠️ Tecnologias Utilizadas
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* **Frontend:** [Angular 19+](https://angular.io/) (Standalone Components)
+* **Linguagem:** TypeScript
+* **Estilização:** CSS3 (Grid/Flexbox, Variáveis CSS)
+* **Consumo de API:** HttpClient, RxJS (Observables)
+* **Gerenciamento de Rotas:** Angular Router com Guards de Autenticação
 
-```bash
-ng generate --help
-```
+## 🔗 Integração com Backend (.NET)
 
-## Building
+Este frontend consome uma API RESTful desenvolvida em **.NET / C#** com banco de dados **SQLite**. A comunicação é feita via HTTP, utilizando tokens JWT para rotas protegidas (como criar pets ou ver perfil).
 
-To build the project run:
+**Repositório da API:**
+👉 [Acesse o Backend do AdotaPet aqui](https://github.com/JanGustavo/AdotaPet-Api)
 
-```bash
-ng build
-```
+*Certifique-se de ter a API rodando localmente (porta padrão 5293) para que o frontend funcione corretamente.*
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🎥 Demonstração
 
-## Running unit tests
+Confira o projeto rodando no ambiente mobile:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+[![Assista ao vídeo de demonstração](https://www.youtube.com/shorts/V7zmutKx530/0.jpg)](https://www.youtube.com/shorts/V7zmutKx530)
 
-```bash
-ng test
-```
+*(Clique na imagem acima para assistir ao vídeo completo)*
 
-## Running end-to-end tests
+## 🚀 Como Rodar o Projeto
 
-For end-to-end (e2e) testing, run:
+### Pré-requisitos
+* Node.js instalado (v18 ou superior recomendado)
+* Angular CLI (`npm install -g @angular/cli`)
 
-```bash
-ng e2e
-```
+### Passo a passo
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/lucaas-d3v/adotapet.git](https://github.com/lucaas-d3v/adotapet.git)
+    cd adotapet
+    ```
 
-## Additional Resources
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3.  **Execute o servidor de desenvolvimento:**
+    ```bash
+    ng serve
+    ```
+    *Para testar no celular (mesma rede Wi-Fi):*
+    ```bash
+    ng serve --host 0.0.0.0
+    ```
+
+4.  **Acesse:**
+    Abra o navegador em `http://localhost:4200/`
+
+## 📂 Estrutura do Projeto
+
+A arquitetura foi organizada para facilitar a manutenção e escalabilidade:
+
+* `src/app/services`: Serviços para comunicação com API (`pet.service`, `user.service`) e controle de estado.
+* `src/components/auth`: Componentes de Login e Registro.
+* `src/components/feed`: Componentes do Feed principal e Cards.
+* `src/components/profile`: Componentes de Perfil, Header e Grid de Pets.
+* `src/components/shared`: Componentes reutilizáveis (Header, Footer, SearchBar).
+* `src/app/guards`: Proteção de rotas (AuthGuard).
+* `src/app/interceptors`: Interceptor para adicionar Token JWT automaticamente.
+
+## 🤝 Colaboradores
+
+* **Lucas Dev** - *Frontend & Design*
+* **Jan Gustavo** - *Backend & Integração*
+
+---
+Feito por devs com dedicação.
