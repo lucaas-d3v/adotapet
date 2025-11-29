@@ -1,0 +1,173 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1.1rem;
+    color: #f0f0f0;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30rem;
+    height: 52rem;
+    margin: 2rem;
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+    gap: 2rem;
+    flex: 1;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    width: 100%;
+    min-width: 25rem;
+}
+
+/* Isso mudará a cor de todos os textos dentro da div com a classe 'check' */
+.check label {
+  color: #f0f0f0; /* Substitua pelo código da cor desejada, ex: blue, #FF0000 */
+}
+
+
+.text {
+    font-size: 1.8rem;
+    margin: 0;
+    text-align: left;
+    color: #f0f0f0;
+}
+
+
+input {
+    border: #000000 1px solid;
+    border-radius: 0.5rem;
+    height: 3.5rem;
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+    background-color: #5e3b26;
+    color: #f0f0f0;
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+
+}
+
+input:checked {
+    accent-color: #fd8336;
+
+}
+
+input:focus, input:checked {
+    outline: none;
+    border: 2px solid #603114;
+    background-color: #5e3b26;
+    box-shadow: 0 0 5px rgba(96, 49, 20, 0.5);
+    color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+input::placeholder {
+    color: #f0f0f0;
+}
+
+.destaque {
+    font-size: 1.8rem;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #603114;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.destaque:hover {
+    background-color: #333333;
+}
+
+.whats {
+    text-align: start;
+}
+
+.whatsapp {
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.check {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 1.5rem;
+    margin-top: 2px;
+    text-align: left;
+    text-shadow: #ffffff 1px 1px 2px;
+}
+
+input.error {
+    border-color: #ff0000;
+    background-color: #fffafa;
+}
+
+
+@media (min-width: 768px) {
+    section {
+        max-width: 40rem;
+        padding: 5rem 3rem;
+        gap: 1.5rem;
+    } 
+}
+
+.ja-possui-login {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #e6d6ff;
+    cursor: pointer;
+    text-decoration: underline;
+    display: flex;
+
+    flex-direction:column ;
+    
+    margin-top: 0.5rem;
+
+}
+
+.ja-possui-login:focus {
+    outline: 2px solid #fd8336;
+    outline-offset: 2px;
+}
+.ja-possui-login:hover {
+    color: #fd8336;
+}

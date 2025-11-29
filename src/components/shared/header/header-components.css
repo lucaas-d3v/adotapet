@@ -1,0 +1,22 @@
+.logo {
+    width: 7rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #7A3D17;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; /* tirar a area azul quando clica */
+}
+
+a img {
+    border: none;
+    display: block;
+}

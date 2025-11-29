@@ -1,0 +1,12 @@
+/*
+a4a4a4
+*/
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+}

@@ -1,0 +1,57 @@
+ul li {
+    list-style: none;
+}
+
+img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.imagem_botao_feed {
+    width: 5rem;
+    height: auto;
+}
+
+img {
+    transition: all 1s;
+
+}
+
+.imagem_botao_feed:hover,
+.imagem_perfil:hover {
+    transform: scale(1.15);
+}
+
+.imagem_perfil {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+nav {
+    background-color: #603114;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 6.5vh;
+    padding: 1rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; 
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 9rem;
+}
+
+.linha {
+    border-left: 0.2rem solid rgba(255, 255, 255, 0.8);
+    height: 2.5rem;
+}

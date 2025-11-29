@@ -1,0 +1,32 @@
+<div class="container">
+  <h2>Cadastrar Novo Pet</h2>
+  <form [formGroup]="petForm" (ngSubmit)="onSubmit()">
+    
+    <label>Nome do Pet:</label>
+    <input formControlName="name" type="text" placeholder="Ex: Rex" />
+
+    <label>Espécie:</label>
+    <select formControlName="species">
+      <option value="Cachorro">Cachorro</option>
+      <option value="Gato">Gato</option>
+    </select>
+
+    <label>Idade (anos):</label>
+    <input formControlName="age" type="number" />
+
+    <label>Porte:</label>
+    <select formControlName="size">
+      <option value="Pequeno">Pequeno</option>
+      <option value="Médio">Médio</option>
+      <option value="Grande">Grande</option>
+    </select>
+
+    <label>Link da Foto (URL):</label>
+    <input formControlName="imageUrl" type="text" placeholder="http://..." />
+
+    <label>Descrição:</label>
+    <textarea formControlName="description" rows="3"></textarea>
+
+    <button type="submit" [disabled]="petForm.invalid">Salvar Pet</button>
+  </form>
+</div>

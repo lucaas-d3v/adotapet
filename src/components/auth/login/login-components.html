@@ -1,0 +1,43 @@
+<div class="container">
+  <section>
+    <form [formGroup]="login" (ngSubmit)="logar()" novalidate>
+      <h2>Login</h2>
+
+      <div class="campo">
+        <p class="text">Email</p>
+        <input
+          id="email"
+          type="email"
+          placeholder="Digite seu email aqui..."
+          aria-label="Campo de email"
+          required
+          formControlName="email"
+        />
+      </div>
+
+      <div class="campo">
+        <p class="text">Senha</p>
+        <input
+          id="senha"
+          type="password"
+          placeholder="Digite sua senha aqui..."
+          aria-label="Campo de senha"
+          required
+          formControlName="senha"
+        />
+      </div>
+      <button class="destaque" (click)="logar()">Entrar</button>
+
+      <p
+        class="nao-possui-login"
+        role="link"
+        tabindex="0"
+        (click)="closeLoginOpenRegister($event)"
+        (keydown.enter)="closeLoginOpenRegister($event)"
+        (keydown.space)="closeLoginOpenRegister($event)"
+      >
+        Não possui login?
+      </p>
+    </form>
+  </section>
+</div>

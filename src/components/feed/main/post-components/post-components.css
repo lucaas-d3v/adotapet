@@ -1,0 +1,121 @@
+/* --- LAYOUT GERAL --- */
+.ambiente {
+    /* AJUSTE CRÍTICO DA LISTRA PRETA: 
+       Em vez de calc fixo, tente usar 100% se o pai já tiver tamanho definido.
+       Se não, aumentamos a altura para garantir que cubra. 
+       Ajuste o '10vh' se o seu footer for maior/menor. */
+    height: calc(100vh - 55px);
+    /* 55px é uma altura média de header/footer */
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    background-color: #000;
+    /* Fundo preto caso a imagem falhe */
+}
+
+.area_post {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Força o post a ocupar toda a altura da .ambiente */
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+/* --- IMAGEM --- */
+.media-background {
+    width: 100%;
+    height: 100%;
+}
+
+.media-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Isso garante que não sobrem bordas pretas */
+    display: block;
+    /* Remove espaços fantasmas abaixo da imagem */
+}
+
+/* --- OVERLAY (TEXTO + BOTÃO) --- */
+.overlay-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Gradiente mais suave e maior para dar leitura */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    padding: 20px 20px 30px 20px;
+    /* Mais padding embaixo para afastar do footer */
+    box-sizing: border-box;
+
+    /* Flexbox para alinhar texto e botão lado a lado */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Texto do Pet */
+.info-texto {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    max-width: 65%;
+    /* Garante espaço para o botão */
+}
+
+.titulo_post {
+    font-size: 1.8rem;
+    /* Levemente menor para ficar elegante */
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.detalhe-extra {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* --- BOTÃO WHATSAPP ESTILIZADO --- */
+.btn-whatsapp {
+    /* Removemos posicionamento absoluto, agora é flex item */
+    background-color: #25D366;
+    color: white;
+    border: none;
+
+    /* Formato Pílula */
+    border-radius: 50px;
+    padding: 8px 16px;
+
+    /* Tamanho e Fonte */
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    /* Alinhamento do ícone e texto */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Espaço entre ícone e texto */
+
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+    /* Sombra verde */
+    transition: transform 0.2s ease, background-color 0.2s;
+    white-space: nowrap;
+    /* Não quebra linha */
+}
+
+.btn-whatsapp:active {
+    transform: scale(0.95);
+    background-color: #1ebc57;
+}
+
+.btn-whatsapp svg {
+    display: block;
+    /* Fix para alinhamento de SVG */
+}

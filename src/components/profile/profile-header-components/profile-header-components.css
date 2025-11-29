@@ -1,0 +1,57 @@
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    /* Separa info do botão */
+    align-items: center;
+    padding: 20px;
+    background-color: #f0e6d2;
+    /* Bege do tema */
+    border-bottom: 2px solid #5c3a21;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #5c3a21;
+    object-fit: cover;
+}
+
+.texts h2 {
+    margin: 0;
+    color: #5c3a21;
+    font-size: 1.2rem;
+}
+
+.texts p {
+    margin: 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* ESTILO DO BOTÃO ADICIONAR */
+.btn-add-pet {
+    background-color: #5c3a21;
+    /* Marrom escuro */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    /* Pílula */
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-add-pet:hover {
+    background-color: #3e2716;
+}

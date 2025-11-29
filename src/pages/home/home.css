@@ -1,0 +1,181 @@
+:host {
+    overflow: hidden;
+    max-height: 100vh;
+
+    width: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #401402;
+    
+}
+
+
+.header {
+    width: 100%;
+    margin-bottom: auto;
+}
+
+div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.container-imagem {
+    position: relative;
+
+    min-height: 100vh;
+}
+
+.container-imagem img {
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
+    min-height: 100vh;
+}
+
+.container-imagem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Aplica o gradiente linear por cima da imagem, escurecendo só embaixo */
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    
+    /* transition: all 0.5s; */
+    overflow: hidden;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.surface {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgba(18, 18, 18, 0.9);
+    padding: 1.5rem;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.65);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+}
+
+.overlay.show .surface {
+    transform: translateY(0) scale(1);
+}
+
+.close {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 2rem;
+    line-height: 2;
+    transition: all 0.5s;
+    overflow: auto;
+    font-size: 3rem;
+}
+
+#x {
+    outline: none;
+        text-decoration: none;
+        
+        /* tirar a area azul quando clica */
+        -webkit-tap-highlight-color: transparent;
+}
+
+.close:hover {
+    color: #ffd166;
+    transition: all 0.5s;
+}
+
+.novo-footer {
+    position: fixed;
+    bottom: 0;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+
+.botao-footer {
+    margin: 0.5rem;
+    height: 6rem;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border: none;
+    background-color: #121212;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.botao-footer:hover {
+    background-color: rgba(72, 72, 72, 0.1);
+}
+
+.botao-footer:active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.botao-footer:first-child {
+    border-right: 1px solid rgba(101, 101, 101, 0.1);
+}
+    

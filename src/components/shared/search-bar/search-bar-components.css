@@ -1,0 +1,40 @@
+.pesquisa_icon {
+    height: 3rem;
+}
+
+.barra_pesquisa {
+    height: 2.5rem;
+    border: #000000 1px solid;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+}
+.barra-lateral {
+    height: 5rem;
+    border: #000000 1px solid;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    background-color: #603114;
+    gap: 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1000;
+    height: 10vh;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}

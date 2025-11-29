@@ -1,0 +1,35 @@
+/* 1. Configuração base do HTML */
+html {
+    font-size: 62.5%;
+    height: 100%;
+    /* Garante que a base ocupe 100% da janela */
+    width: 100%;
+    overflow: hidden;
+    /* IMPORTANTE: Impede que o navegador crie scrollbar na página inteira */
+}
+
+/* 2. Limpeza e trava do Body */
+body {
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #000;
+    /* Mudei para preto: evita faixas brancas piscando ao rolar */
+
+    height: 100%;
+    /* MUDANÇA CRÍTICA: Usar height fixo, não min-height */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Reforça que o body não deve rolar */
+}
+
+/* 3. O container do Angular */
+app-root {
+    display: block;
+    /* Flex aqui pode ser perigoso se não souber os filhos diretos */
+    height: 100%;
+    /* O app ocupa exatamente o tamanho do body */
+    width: 100%;
+}

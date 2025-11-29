@@ -1,0 +1,118 @@
+<div class="container">
+  <section>
+    <form [formGroup]="cadastro" (ngSubmit)="register()" novalidate>
+      <h2>Cadastro</h2>
+
+      <div class="campo">
+        <p class="text">Nome</p>
+        <input
+          id="nome"
+          formControlName="nome"
+          type="text"
+          placeholder="Digite seu nome de usuário aqui..."
+          aria-label="Campo de nome"
+          [class.error]="erros.nome"
+        />
+
+        @if (erros.nome) {
+        <div class="error-message">
+          {{ erros.nome }}
+        </div>
+        }
+      </div>
+
+      <div class="campo">
+        <p class="text">Telefone</p>
+        <input
+          id="telefone"
+          formControlName="telefone"
+          type="tel"
+          placeholder="(xx) 9xxxx-xxxx"
+          aria-label="Campo de telefone"
+          [class.error]="erros.telefone"
+        />
+
+        @if (erros.telefone) {
+        <div class="error-message">
+          {{ erros.telefone }}
+        </div>
+        }
+
+        <p class="text">O telefone informado é seu whatsapp?</p>
+        <div class="check">
+          <input
+            class="whatsapp"
+            id="sim"
+            type="checkbox"
+            [checked]="cadastro.get('whatsappCheck')?.value === 'sim'"
+            (change)="onWhatsappChange('sim', $event)"
+          />
+          <label for="sim">Sim</label>
+          <input
+            class="whatsapp"
+            id="nao"
+            type="checkbox"
+            [checked]="cadastro.get('whatsappCheck')?.value === 'nao'"
+            (change)="onWhatsappChange('nao', $event)"
+          />
+          <label for="nao">Não</label>
+        </div>
+      </div>
+
+      <div class="campo">
+        <p class="text">Email</p>
+        <input
+          id="email"
+          formControlName="email"
+          type="email"
+          placeholder="teste@gmail.com"
+          aria-label="Campo de email"
+          [class.error]="erros.email"
+        />
+        <div class="error-message" *ngIf="erros.email">
+          {{ erros.email }}
+        </div>
+      </div>
+
+      <div class="campo">
+        <p class="text">Senha</p>
+        <input
+          id="senha"
+          formControlName="senha"
+          type="password"
+          placeholder="Digite sua senha aqui..."
+          aria-label="Campo de senha"
+          [class.error]="erros.senha"
+        />
+        <div class="error-message" *ngIf="erros.senha">
+          {{ erros.senha }}
+        </div>
+      </div>
+
+      <div class="campo">
+        <p class="text">Confirmar Senha</p>
+        <input
+          id="confirmarSenha"
+          formControlName="confirmarSenha"
+          type="password"
+          placeholder="Digite sua senha aqui..."
+          aria-label="Campo de senha"
+          [class.error]="erros.confirmarSenha"
+        />
+        <div class="error-message" *ngIf="erros.confirmarSenha">
+          {{ erros.confirmarSenha }}
+        </div>
+      </div>
+      <button class="destaque" type="submit">Entrar</button>
+      <p
+        class="ja-possui-login"
+        role="link"
+        tabindex="0"
+        (click)="closeRegisterOpenLogin($event)"
+        (keydown.enter)="closeRegisterOpenLogin($event)"
+        (keydown.space)="closeRegisterOpenLogin($event)">
+        Já possui login?
+      </p>
+    </form>
+  </section>
+</div>

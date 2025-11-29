@@ -1,0 +1,31 @@
+<section class="ambiente">
+  @for (pet of pets; track pet.id ?? pet.nome ?? $index) {
+  <article class="area_post">
+    <!-- Imagem de Fundo -->
+    <div class="media-background">
+      <img
+        class="media-content"
+        [src]="pet.imagem || defaultImage"
+        [alt]="pet.nome"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Informações e Botão Juntos -->
+    <div class="overlay-info">
+      <div class="info-texto">
+        <h5 class="titulo_post">{{ pet.nome || 'Pet' }}, {{ pet.idade || 'N/A' }}</h5>
+        <span class="detalhe-extra">Toque para saber mais</span>
+      </div>
+
+      <button (click)="contactOwner(pet)" class="btn-whatsapp">
+        <!-- Ícone SVG do WhatsApp -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.694c1.096.599 2.071.861 3.179.861l.001-.001c3.281 0 5.922-2.732 5.923-5.913 0-1.554-.582-3.015-1.637-4.114-1.127-1.173-2.617-1.784-4.66-1.784zm-9 5.767c0 1.943.765 3.513 1.99 4.872l-2.021 6.189 6.467-1.691c1.334.693 2.924 1.139 4.563 1.14h.004c4.956 0 8.923-3.955 8.923-8.811 0-4.852-4.148-8.917-8.969-8.917-4.908 0-8.966 3.967-8.966 8.904l.009.314z"/>
+        </svg>
+        WhatsApp
+      </button>
+    </div>
+  </article>
+  }
+</section>

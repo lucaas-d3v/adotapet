@@ -1,0 +1,69 @@
+<main>
+  <app-header-components class="header"></app-header-components>
+
+  <router-outlet></router-outlet>
+
+  <section class="hero-section">
+    <div class="container-imagem">
+      <img src="assets/gifprincipal.webp" alt="Gif Principal" />
+    </div>
+
+    <!-- orveley de login -->
+    @if (showLogin) {
+    <div class="overlay" [class.show]="animateLogin">
+      <div class="surface">
+        <button
+          id="x"
+          type="button"
+          class="close"
+          aria-label="Fechar formulário de login"
+          (click)="closeLogin()"
+        >
+          &times;
+        </button>
+        <app-login-components (registerRequested)="openRegister()"></app-login-components>
+      </div>
+    </div>
+    }
+
+    <!-- orveley de cadastro -->
+    @if (showRegister) {
+    <div class="overlay" [class.show]="animateRegister">
+      <div class="surface">
+        <button
+          id="x"
+          type="button"
+          class="close"
+          aria-label="Fechar formulário de cadastro"
+          (click)="closeRegister()"
+        >
+          &times;
+        </button>
+        <app-register-ccomponents (loginRequested)="openLogin()"></app-register-ccomponents>
+      </div>
+    </div>
+    }
+  </section>
+
+  @if (!showLogin && !showRegister!){
+  <div class="novo-footer">
+    <button
+      type="button"
+      class="botao-footer"
+      (click)="toggleRegister()"
+      [attr.aria-expanded]="showRegister"
+    >
+      ADOTE UM PET
+    </button>
+
+    <button
+      type="button"
+      class="botao-footer"
+      (click)="toggleLogin()"
+      [attr.aria-expanded]="showLogin"
+    >
+      Já tem conta?
+    </button>
+  </div>
+  }
+</main>
